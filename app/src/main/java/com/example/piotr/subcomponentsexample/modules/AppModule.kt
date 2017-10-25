@@ -1,8 +1,7 @@
 package com.example.piotr.subcomponentsexample.modules
 
-import android.content.Context
+import android.app.Application
 import com.example.piotr.subcomponentsexample.App
-import com.example.piotr.subcomponentsexample.dagger.ForApplication
 import com.example.piotr.subcomponentsexample.scoped.ApplicationScoped
 import dagger.Module
 import dagger.Provides
@@ -10,13 +9,12 @@ import javax.inject.Singleton
 
 
 @Module
-class AppModule(private val app: App) {
+class AppModule {
 
     @Provides
     @Singleton
-    @ForApplication
-    fun provideContext(): Context {
-        return app
+    fun provideContext(application: App): Application {
+        return application
     }
 
     @Provides
