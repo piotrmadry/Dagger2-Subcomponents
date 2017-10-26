@@ -4,7 +4,7 @@ import android.util.Log
 
 class ActivityScoped {
 
-    init {
-        Log.d("DAGGER", "ACTIVITY SCOPED CLASS")
+    fun run() {
+        Log.d("DAGGER", "ACTIVITY SCOPED")
     }
 }

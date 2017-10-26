@@ -4,8 +4,6 @@ import android.app.Activity
 import android.app.Application
 import com.example.piotr.subcomponentsexample.components.AppComponent
 import com.example.piotr.subcomponentsexample.components.DaggerAppComponent
-import com.example.piotr.subcomponentsexample.modules.AppModule
-import com.example.piotr.subcomponentsexample.scoped.ApplicationScoped
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
@@ -19,20 +17,14 @@ class App : HasActivityInjector, Application() {
         return injector
     }
 
-    @Inject lateinit var applicationScoped: ApplicationScoped
-
-    lateinit var appComponent: AppComponent
-
     override fun onCreate() {
         super.onCreate()
-        appComponent = initializeAppComponent()
-        appComponent.inject(this)
+        initializeAppComponent().inject(this)
     }
 
     private fun initializeAppComponent(): AppComponent {
         return DaggerAppComponent.builder()
                 .application(this)
-                .appModule(AppModule())
                 .build()
     }
 }

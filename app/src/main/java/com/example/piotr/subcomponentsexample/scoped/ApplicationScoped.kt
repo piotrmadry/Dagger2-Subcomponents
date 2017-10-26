@@ -4,7 +4,7 @@ import android.util.Log
 
 class ApplicationScoped {
 
-    init {
-        Log.d("DAGGER", "APPLICATION SCOPED CLASS")
+    fun run() {
+        Log.d("DAGGER", "APPLICATION SCOPED")
     }
 }
