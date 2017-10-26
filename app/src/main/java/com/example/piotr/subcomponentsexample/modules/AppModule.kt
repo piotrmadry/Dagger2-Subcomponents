@@ -18,7 +18,6 @@ class AppModule {
     }
 
     @Provides
-    @Singleton
     fun provideApplicationScoped(): ApplicationScoped {
         return ApplicationScoped()
     }

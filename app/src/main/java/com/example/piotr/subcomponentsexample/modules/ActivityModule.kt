@@ -5,22 +5,10 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-abstract class ActivityModule {
-//
-//    @Provides
-//    @ForActivity
-//    fun provideContext(): Context {
-//        return activity
-//    }
-//
-//    @Provides
-//    @ForActivity
-//    fun privideActivity(): Activity {
-//        return activity
-//    }
+class ActivityModule {
 
     @Provides
-    fun provideActivityScoped(): ActivityScoped {
+    fun scoped(): ActivityScoped {
         return ActivityScoped()
     }
 }
