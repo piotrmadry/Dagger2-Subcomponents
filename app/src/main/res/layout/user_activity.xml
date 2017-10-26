@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<FrameLayout
+    android:id="@+id/container"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -11,4 +12,28 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-</android.support.constraint.ConstraintLayout>
+    <FrameLayout
+        android:layout_marginBottom="40dp"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <Button
+            android:id="@+id/button_fragment_a"
+            android:layout_marginStart="30dp"
+            android:layout_gravity="center_vertical|start"
+            android:text="Fragment A"
+            android:layout_width="150dp"
+            android:layout_height="80dp"/>
+
+        <Button
+            android:id="@+id/button_fragment_b"
+            android:layout_marginEnd="30dp"
+            android:layout_gravity="center_vertical|end"
+            android:text="Fragment B"
+            android:layout_width="150dp"
+            android:layout_height="80dp"/>
+
+    </FrameLayout>
+
+</FrameLayout>
