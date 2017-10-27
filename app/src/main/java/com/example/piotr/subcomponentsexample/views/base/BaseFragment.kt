@@ -1,4 +1,4 @@
-package com.example.piotr.subcomponentsexample.views.user.fragment
+package com.example.piotr.subcomponentsexample.views.base
 
 import android.content.Context
 import android.support.v4.app.Fragment

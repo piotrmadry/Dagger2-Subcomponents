@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.piotr.subcomponentsexample.R
 import com.example.piotr.subcomponentsexample.scoped.ActivityScoped
+import com.example.piotr.subcomponentsexample.views.base.BaseFragment
 import javax.inject.Inject
 
 class FragmentB : BaseFragment() {
